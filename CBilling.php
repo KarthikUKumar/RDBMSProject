@@ -123,7 +123,7 @@ if(isset($_POST["fert"]))
      $i=0;
      $q=mysqli_query($d,"select D.DId,D.DName,D.DLocation,D.Mob_No,A.Price,F.FCompany,A.FId from Dealer D join Available_in A on D.DId=A.DId inner join FERTILIZER F on F.FId=A.FId where F.FName='$dw'");
      echo "<form action='BillGenerating' method='post'>";
-     echo "<div class=\"container\"><i class=\"fas fa-search\">           <input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\" align=\"right\"></i><br><br><table class=\"table table-light table-hover\"><thead><tr><th></th><th>Shop Name</th><th>Location</th><th>Mobile No.</th><th>Company</th><th>Price/KG</th></tr></thead><tbody id='myTable'>";
+     echo "<div class=\"container\"><i class=\"fas fa-search\">           <input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\" align=\"right\"></i><br><br><table class=\"table table-light table-hover\" style='text-align:left;'><thead><tr><th></th><th>Shop Name</th><th>Address</th><th style='width:13.5%'>Mobile No.</th><th>Company</th><th>Price/KG</th></tr></thead><tbody id='myTable'>";
      while($row=mysqli_fetch_array($q,MYSQLI_NUM))
      {
           $i=$i+1;

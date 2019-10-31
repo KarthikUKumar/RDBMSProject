@@ -91,7 +91,7 @@ if(mysqli_num_rows($q)>0)
 {
    mysqli_query($d,"Delete from Stock where Rem_Qty=0 and FarmId=$farmid");
    $i=0;
-   echo "<div class=\"container\"><i class=\"fas fa-search\"><input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\"></i><br><br><table class=\"table table-light table-hover\"><thead><tr><th></th><th>Fertilizer Name</th><th>Company</th><th>Remaining Quantity</th></tr></thead><tbody id='myTable'>";
+   echo "<div class=\"container\"><i class=\"fas fa-search\"><input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\"></i><br><br><table class=\"table table-light table-hover\"  style='text-align:left;'><thead><tr><th></th><th>Fertilizer Name</th><th>Company</th><th>Remaining Quantity</th></tr></thead><tbody id='myTable'>";
    while($row=mysqli_fetch_array($q))
    {
       $i=$i+1;

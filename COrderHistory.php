@@ -117,7 +117,7 @@ if(isset($_POST["fer"]))
      if(mysqli_num_rows($q)>0)
      {  
          echo "<h4>Fertilizer:   $f</h4><br>";
-         echo "<div class=\"container\"><i class=\"fas fa-search\"><input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\"></i><br><br><table class=\"table table-light table-hover\"><thead><tr><th>Bill No.</th><th>Purchase Date</th><th>Company</th><th>Shop Name</th><th>Quantity</th><th>Amount</th></tr></thead><tbody id='myTable'>";
+         echo "<div class=\"container\"><i class=\"fas fa-search\"><input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\"></i><br><br><table class=\"table table-light table-hover\" style='text-align:left;'><thead><tr><th>Bill No.</th><th>Purchase Date</th><th>Company</th><th>Shop Name</th><th>Quantity</th><th>Amount</th></tr></thead><tbody id='myTable'>";
          while($ro=mysqli_fetch_array($q,MYSQLI_NUM))
          {
              echo '<tr><td>'.$ro[0].'</td><td>'.$ro[1].'</td><td>'.$ro[2].'</td><td>'.$ro[3].'</td><td>'.$ro[4].'  Kg</td><td>&#8377  '.$ro[5].'</td></tr>';

@@ -113,11 +113,11 @@ $d=mysqli_connect('localhost','root','','fertManagement') or die("Error connecti
 echo "<form method='POST' action='update.php'><br><div class=\"form-group\">";
 $rq=mysqli_query($d,"select F.FId,F.FName,F.FCompany,S.Rem_Qty from Stock S,Farmer Fa,Fertilizer F where S.FarmId=Fa.FarmId and F.FId=S.FId and Fa.FarmId=$farmid");
 if(mysqli_num_rows($rq)>0){
-echo "<div class=\"container\"><i class=\"fas fa-search\">           <input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\" align=\"right\"></i><br><br><table class=\"table table-light table-hover\"><thead><tr><th></th><th>Fertilizer Name</th><th>Company</th><th>Available Quantity</th><th>Enter the Quantity Used</th></tr></thead><tbody id='myTable'>";
+echo "<div class=\"container\"><i class=\"fas fa-search\">           <input class=\"form-control\" id=\"myInput\" type=\"text\" placeholder=\"Search...\" align=\"right\"></i><br><br><table class=\"table table-light table-hover\" style='text-align:left;'><thead><tr><th></th><th>Fertilizer Name</th><th>Company</th><th>Available Quantity</th><th>Enter the Quantity Used</th></tr></thead><tbody id='myTable'>";
 while($rop=mysqli_fetch_array($rq,MYSQLI_NUM)){
      $i=$i+1;
      $f=$f+2;
-     echo "<tr><td><div class=\"custom-control custom-radio\"><input type=\"radio\" class=\"custom-control-input\" id=$f name=\"radio1\" value=\"$rop[0]\" onclick=\"yesnocheck($f,$i);\"><label class=\"custom-control-label\" for=$f></label></div></td><td>$rop[1]</td><td>$rop[2]</td><td>$rop[3]  Kg</td><td><center><input type=\"number\" id=$i min=0 max=$rop[3] step=0.5 name=\"$rop[0]\" class=\"form-control\" hidden>&nbsp;Kg</center></center></td></tr>";
+     echo "<tr><td><div class=\"custom-control custom-radio\"><input type=\"radio\" class=\"custom-control-input\" id=$f name=\"radio1\" value=\"$rop[0]\" onclick=\"yesnocheck($f,$i);\"><label class=\"custom-control-label\" for=$f></label></div></td><td>$rop[1]</td><td>$rop[2]</td><td>$rop[3]  Kg</td><td><center><input type=\"number\" id=$i min=0 max=$rop[3] step=0.5 name=\"$rop[0]\" class=\"form-control\" hidden>Kg</center></center></td></tr>";
 }
 echo "</tbody></table><br>";
 echo "<button type=\"submit\" class=\"btn btn-primary\">OK</button></form><br><br>";
