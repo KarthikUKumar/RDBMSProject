@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>Fertilizer Management</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+background-image: linear-gradient(to left bottom, #91d1bd, #80d3b4, #71d4a8, #64d59a, #5bd58a, #43d197, #29cda2, #00c8ac, #00b9ca, #00a7e3, #008fec, #516fdc);
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+.footer {
+    bottom: 0px;
+    width: 100%;
+    display: fixed;
+    height: 63px;
+    color: white;
+    background-color: black;
+ 
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 10px 55px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #000000;
+}
+span{
+background-image: linear-gradient(to right bottom, #d2e041, #fab51d, #ff8339, #ff4965, #ff1197, #e045c7, #ac67eb, #5c80ff, #009bff, #00aff9, #00bee4, #3ac9cf);
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  border-radius: 25px;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+body{
+text-align: center;
+}
+h1{
+text-align: center;
+}
+  .carousel-inner {
+      width: 100%;
+      height: 100%;
+  }
+ .carousel-inner img{
+      width: 100%;
+      height: 300px;
+  }
+</style>
+
+</head>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><h4>Fertilizer Management</h4></a>&nbsp;
+<h5>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item" style="color:black;">
+      <a class="nav-link" href="#"><i class="fas fa-home"></i>     Home</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost//CDealer.php"><i class="fas fa-search"></i>&nbsp;Find Dealer</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost//CBilling.php"><i class="fas fa-shopping-cart"></i>&nbsp;Buy Fertilizer</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost//CStockInfo.php"><i class="fas fa-store"></i>Stock Info</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost//CStockUpdate.php"><i class="fas fa-cart-plus"></i>Update Usage</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost//COrderHistory.php"><i class="fas fa-history"></i>Purchase History</a>
+    </li>&nbsp;
+    <li class="nav-item">
+      <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<br>
+</h5>
+
+<body>
+<br>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<a href="http://localhost//CDealer.php">
+      <img src="533c54045baa7.image.jpg" alt="Find dealer" >
+ <div class="carousel-caption">
+        <h3 style="color: white;">Find dealer</h3>
+        <p style="color: white;"><b>Search for the best dealer for your fertilizer</b></p>
+      </div></a> 
+    </div>
+    <div class="carousel-item">
+<a href="http://localhost//CStockInfo.php">
+      <img src="images (5).jpg" alt="Manage Stock" >
+ <div class="carousel-caption">
+        <h3 style="color: black;">Manage Stock</h3>
+        <p style="color: white;"><b>Keep track of your fertilizer stock usage and purchase</b></p>
+      </div> </a>
+    </div>
+    <div class="carousel-item"><a class="nav-link" href="http://localhost//COrderHistory.php">
+      <img src="images (4).jpg" alt="Order history" style="height: 300x; width: 100%;">
+      <div class="carousel-caption">
+        <h3 style="color: white;">Purchase History</h3>
+        <p style="color: black;"><b>Get details about your previous fertilizer purchases</b></p>
+      </div></a> 
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br>
+<center>
+<div class="row">
+  <div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h3>Find Dealer</h3><br><i class="fas fa-search fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Find Dealer</h1><p>      </p> <p>      </p>
+      <p>Search for the best </p> 
+     <p> dealer for your fertilizer</p><p><br><br></p>
+      <a href="http://localhost//CDealer.php" class="btn btn-light">Click Here</a>
+    </div>
+  </div>
+</div></div>
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Buy Fertilizer</h3><br><i class="fas fa-shopping-cart fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Buy Fertilizer</h1><br> 
+      <p>Update details about your </p> 
+      <p>Fertilizer Purchases.<br><br><br></p>
+      <a href="http://localhost//CBilling.php" class="btn btn-light">Click Here</a>
+    </div>
+  </div>
+</div></div>
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Stock Info</h3><br><i class="fas fa-store fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Stock Info</h1> <br>
+      <p>Get to know about </p> 
+      <p>your Fertilizer Stock.<br><br></p><br>
+      <a href="http://localhost//CStockInfo.php" class="btn btn-light">Click Here</a>
+    </div>
+  </div>
+</div></div></div><br>
+<div class="row">
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Update Usage</h3><br><i class="fas fa-cart-plus fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Update Usage</h1><br> 
+      <p>Update the quantity of </p> 
+      <p>Fertilizer used after usage<br><br></p><br>
+     <a href="http://localhost//CStockUpdate.php" class="btn btn-light">Click Here</a>
+    </div>
+  </div>
+</div></div>
+<div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Purchase History</h3><br><i class="fas fa-history fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Purchase History</h1> 
+      <p>Get details about your </p> 
+      <p>previous fertilizer purchases<br><br></p>
+<a href="http://localhost//COrderHistory.php" class="btn btn-light">Click Here</a>
+    </div>
+  </div>
+</div></div>
+<div class="column">
+<div class="flip-card" id="contact">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Contact Us</h3><br><i class="fas fa-phone fa-10x"></i>
+    </div>
+    <div class="flip-card-back">
+      <h1>Contact Us</h1> <br><br>
+      <a href="https://api.whatsapp.com/send?phone=919482233790">+91 9482233790</a><br>
+      <a href="https://api.whatsapp.com/send?phone=919071977668">+91 9071977668</a><br><br>
+      <p>Email Id :4nm17cs080@nmamit.in<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4nm17cs061@nmamit.in</p>
+    </div>
+  </div>
+</div></div>
+</div><br><br>
+</center></body>
+<footer class="footer">
+      <div class="container">
+      <p><br>Designed By Faraz Shaikh, Karthik U Kumar.</p>
+      </div>
+    </footer>
+</html>
